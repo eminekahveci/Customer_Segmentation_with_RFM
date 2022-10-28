@@ -1,26 +1,22 @@
-RULE-BASED CLASSIFICATION
+# Customer Segmentation with RFM Analysis
 
-- A game company wants to create level-based new customer definitions (personas) by using some features of its customers, and to create segments according to these new customer definitions and to estimate how much the new customers can earn on average according to these segments.
+## Business Problem
 
-- For example: It is desired to determine how much a
--  25-year-old male user from Turkey, who is an IOS user, can earn on average.
+Customers of FLO, an online shoe store segmenting and marketing according to these segments wants to define strategies. For this purpose behavior of customers will be defined and this. Groups will be formed according to clusters in behaviors
 
-Dataset Story
+## Dataset Story: 
 
--Persona.csv dataset contains the prices of the products sold by an international game company and some demographic information of the users who buy these products. The data set consists of records created in each sales transaction. This means that the table is not deduplicated. In other words, a user with certain demographic characteristics may have made more than one purchase.
+The dataset includes Flo's last purchases from OmniChannel (both online and offline shoppers) in 2020 - 2021. It consists of information obtained from the past shopping behavior of customers who.
 
-Variables:
+### Variables:
 
-    Price: Customer's spending amount
-
-    Source: The type of device the customer is connecting to
-
-    Sex: Gender of the client
-
-    Country: Country of the customer
-
-    Age: Customer's age
-
-    For example: It is desired to determine how much a
-
-    25-year-old male user from Turkey who is an IOS user can earn on average
+- master_id : Unique client number,
+- Last_order_channel : The last shopping channel
+- first_order_date : Customer's first purchase date
+- last_order_date_online : The date of the last purchase made by the customer on the online platform
+- last_order_date_offline : The date of the last purchase made by the customer on the offline platform
+- last shopping date last_date_off: Last shopping date on customer's offline platform
+- order_num_total_ever_offline : Total number of purchases by the customer as offline
+- order_num_total_ever_online : The number of purchases available on the customer's online platform
+- customer_value_total_ever_offline :The total price paid by the customer for their online shopping
+- interested_in_categories_12 : List of categories the customer has shopped in the last 12 months
